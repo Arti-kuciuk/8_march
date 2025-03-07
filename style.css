@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overscroll-behavior: none;
+}
+
+.bg1 {
+    background-image: url(baclground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.bg2 {
+    background-color: #EDD9E5;
+    background-size: cover;
+    height: 100vh;
+}
+
+.heart {
+    position: absolute;
+    background-image: url(heart.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    animation: floatUp 5s linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Затемняющий фон */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in, visibility 0.5s;
+}
+
+/* Видимый overlay */
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Блок с пожеланием */
+.message-box {
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 4rem;
+    font-family: 'Playfair Display', serif;;
+    text-align: center;
+    transform: scale(0.2);
+    opacity: 0;
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+/* Когда overlay активен, сообщение тоже появляется */
+.overlay.active .message-box {
+    transform: scale(1);
+    opacity: 1;
+}

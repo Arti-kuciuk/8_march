@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 march</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="bg1">
+        <img src="8.png" alt="8 марта" 
+            class="absolute top-1/2 left-1/2 w-[60%] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_10px_10px_rgba(0,0,0,0.3)]">
+        
+        <div id="hearts-container" class="fixed top-0 left-0 w-full h-full"></div>
+
+    </section>
+
+    <section class="bg2 relative min-h-screen flex flex-col justify-between">
+        <div class="relative cards-container flex flex-col items-center md:block">
+            <!-- 1 карточка -->
+            <div class="relative group mt-[10vh] md:absolute md:left-[10vh]">
+                <div class="w-[60vw] lg:w-[40vw] aspect-[16/10] bg-[#A23F6E] rounded-2xl 
+                    flex items-center gap-4 shadow-lg hover:scale-110 hover:shadow-2xl 
+                    transition duration-300">
+                    
+                    <img src="mom.jpg" alt="Мамочка" class="rounded-2xl h-full aspect-[3/4] object-cover">
+                    
+                    <p class="text-white text-0.8xl lg:text-2xl xl:text-4xl font-normal leading-snug pl-2"
+                        style="font-family: 'Playfair Display', serif;">
+                        Мамочка, <br> милая, <br> нежная, <br> классная, <br>
+                        Ты у нас <br> самая яркая, <br> страстная!
+                    </p>
+        
+                    <div class="absolute top-5 right-5 opacity-0 scale-75
+                        group-hover:opacity-100 group-hover:scale-100 transition duration-500">
+                        <img src="red_heart.png" alt="Heart" class="w-[5vw] h-[5vw]">
+                    </div>
+                </div>
+            </div>
+        
+            <!-- 2 карточка -->
+            <div class="relative group mt-[10vh] md:absolute md:right-[10vh]">
+                <div class="w-[60vw] lg:w-[40vw] aspect-[16/10] bg-[#A23F6E] rounded-2xl 
+                    flex items-center gap-4 shadow-lg hover:scale-110 hover:shadow-2xl 
+                    transition duration-300">
+                    
+                    <img src="gramdma.jpg" alt="Бабушка" class="rounded-2xl h-full aspect-[3/4] object-cover">
+                    
+                    <p class="text-white text-0.8xl lg:text-2xl xl:text-4xl font-normal leading-snug pl-2"
+                        style="font-family: 'Playfair Display', serif;">
+                        Бабушка, <br> милая, <br> нежная, <br> славная, <br>
+                        Ты у нас <br> самая <br> стильная, <br> главная!
+                    </p>
+        
+                    <div class="absolute top-5 right-5 opacity-0 scale-75
+                        group-hover:opacity-100 group-hover:scale-100 transition duration-500">
+                        <img src="red_heart.png" alt="Heart" class="w-[5vw] h-[5vw]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <footer class="relative w-full h-[20vh] flex flex-row justify-between items-end px-[10vh]">
+            <!-- Дата -->
+            <div class="text-[#0D0D0D] text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-6" style="font-family: 'Dancing Script', cursive;">
+                08.03.2025
+            </div>
+        
+            <!-- Цветы (по центру) -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                <img src="flowers.png" alt="flowers" class="w-[20vw]">
+            </div>
+        
+            <!-- Подпись -->
+            <div class="text-[#0D0D0D] text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-6" style="font-family: 'Dancing Script', cursive;">
+                Kuchuk Artiom
+            </div>
+        </footer>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
